@@ -1,7 +1,7 @@
 {
     "dashboard": {
         "id": null,
-        "title": "NAIS {{cluster}} cluster dashboard",
+        "title": "NAIS {{cluster}} single page cluster dashboard",
         "folderId": 555,
         "tags": [
             "kubernetes",
@@ -112,7 +112,7 @@
                 "gridPos": {
                     "h": 6,
                     "w": 4
-                }            
+                }
             },
             {
                 "type": "graph",
@@ -138,98 +138,7 @@
                 "gridPos": {
                     "h": 8,
                     "w": 8
-                }            
-            },
-            {
-                "type": "row",
-                "repeating": true,
-                "collapsed": false,
-                "nodes": "{{masters}}",
-                "panels": [
-                    {
-                        "type": "discrete",
-                        "timeFrom": "24h",
-                        "title": "Master component status",
-                        "measurement": [
-                            "processDockerd",
-                            "processKubelet",
-                            "interfaceDocker0",
-                            "interfaceFlannel",
-                            "componentControllerManager",
-                            "componentScheduler",
-                            "componentEtcd0",
-                            "addonCoredns",
-                            "addonKubernetesDashboard",
-                            "addonTillerDeploy"
-                        ]
-                    },
-                    {
-                        "type": "graph",
-                        "measurement": "cpuIdle",
-                        "max": 100,
-                        "title": "Node CPU Load"
-                    },
-                    {
-                        "type": "graph",
-                        "stack": true,
-                        "max": 100,
-                        "measurement": [
-                            "memoryUsageWOBuffersCaches",
-                            "memoryPercentCached"
-                        ],
-                        "title": "Node Memory Usage"
-                    },
-                    {
-                        "type": "graph",
-                        "max": 100,
-                        "measurement": "diskVarUsage",
-                        "title": "Node Disk Usage (/var)"
-                    }
-                ]
-            },
-            {
-                "type": "row",
-                "repeating": true,
-                "collapsed": false,
-                "nodes": "{{workers}}",
-                "panels": [
-                    {
-                        "type": "discrete",
-                        "nodes": null,
-                        "timeFrom": "24h",
-                        "title": "Worker component status",
-                        "measurement": [
-                            "processDockerd",
-                            "processKubelet",
-                            "processFlanneld",
-                            "processKubeProxy",
-                            "interfaceDocker0",
-                            "interfaceFlannel"
-                        ]
-                    },
-                    {
-                        "type": "graph",
-                        "measurement": "cpuIdle",
-                        "max": 100,
-                        "title": "Node CPU Load"
-                    },
-                    {
-                        "type": "graph",
-                        "stack": true,
-                        "max": 100,
-                        "measurement": [
-                            "memoryUsageWOBuffersCaches",
-                            "memoryPercentCached"
-                        ],
-                        "title": "Node Memory Usage"
-                    },
-                    {
-                        "type": "graph",
-                        "max": 100,
-                        "measurement": "diskVarUsage",
-                        "title": "Node Disk Usage (/var)"
-                    }
-                ]
+                }
             }
         ],
         "schemaVersion": 6,
