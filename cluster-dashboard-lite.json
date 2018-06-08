@@ -62,56 +62,76 @@
                 "title": "CPU usage",
                 "postfix": "%",
                 "datasource": "{{cluster}}",
-                "measurement": "totalClusterCoresUsagePercent"
+                "measurement": "totalClusterCoresUsagePercent",
+                "gridPos": {
+                    "h": 5,
+                    "w": 4
+                }
             },
             {
                 "type": "singleStatGauge",
                 "title": "Memory usage",
                 "postfix": "%",
                 "datasource": "{{cluster}}",
-                "measurement": "totalClusterMemoryUsagePercent"
+                "measurement": "totalClusterMemoryUsagePercent",
+                "gridPos": {
+                    "h": 5,
+                    "w": 4
+                }
             },
             {
                 "type": "singleStatGauge",
                 "title": "Storage usage",
                 "postfix": "%",
                 "datasource": "{{cluster}}",
-                "measurement": "totalClusterStorageUsagePercent"
+                "measurement": "totalClusterStorageUsagePercent",
+                "gridPos": {
+                    "h": 5,
+                    "w": 4
+                }
             },
             {
                 "type": "singleStatGauge",
                 "title": "Allocated cores",
                 "datasource": "{{cluster}}",
                 "postfix": "%",
-                "measurement": "totalClusterCoresAllocatedPercent"
+                "measurement": "totalClusterCoresAllocatedPercent",
+                "gridPos": {
+                    "h": 5,
+                    "w": 4
+                }
             },
             {
                 "type": "singleStatGauge",
                 "title": "Allocated memory",
                 "datasource": "{{cluster}}",
                 "postfix": "%",
-                "measurement": "totalClusterMemoryAllocatedPercent"
-            },
-            {
-                "type": "singleStat",
-                "title": "Successful requests last 5 minutes",
-                "datasource": "{{cluster}}",
-                "sparkline": true,
-                "measurement": "successfulRequests",
+                "measurement": "totalClusterMemoryAllocatedPercent",
                 "gridPos": {
-                    "h": 6,
+                    "h": 5,
                     "w": 4
                 }
             },
             {
                 "type": "singleStat",
-                "title": "Failed requests last 5 minutes",
+                "title": "Successful requests last 5m",
+                "datasource": "{{cluster}}",
+                "sparkline": true,
+                "measurement": "successfulRequests",
+                "gridPos": {
+                    "h": 5,
+                    "w": 2
+                }
+            },
+            {
+                "type": "singleStat",
+                "title": "Failed requests last 5m",
                 "datasource": "{{cluster}}",
                 "sparkline": true,
                 "measurement": "failedRequests",
                 "gridPos": {
-                    "h": 6,
-                    "w": 4
+                    "h": 5,
+                    "w": 2                
                 }
             },
             {
@@ -134,11 +154,7 @@
             },
             {
                 "type": "responseHistogramGraph",
-                "datasource": "{{cluster}}",
-                "gridPos": {
-                    "h": 8,
-                    "w": 8
-                }
+                "datasource": "{{cluster}}"
             }
         ],
         "schemaVersion": 6,
