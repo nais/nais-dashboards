@@ -10,32 +10,56 @@
         "timezone": "browser",
         "panels": [
             {
+                "type": "timePanel",
+                "title": "Last update"
+            },
+            {
                 "type": "text",
-                "text": "{{cluster}}"
+                "text": "{{cluster}}",
+                "gridPos": {
+                    "h": 3,
+                    "w": 5
+                }
             },
             {
                 "type": "singleStat",
                 "title": "No of pods",
                 "datasource": "{{cluster}}",
-                "measurement": "kubePodContainerInfoCount"
+                "measurement": "kubePodContainerInfoCount",
+                "gridPos": {
+                    "h": 3,
+                    "w": 3
+                }
             },
             {
                 "type": "singleStat",
                 "title": "Pending pods",
                 "datasource": "{{cluster}}",
-                "measurement": "kubePodStatusPhasePending"
+                "measurement": "kubePodStatusPhasePending",
+                "gridPos": {
+                    "h": 3,
+                    "w": 3
+                }
             },
             {
                 "type": "singleStat",
                 "title": "Available deployments",
                 "datasource": "{{cluster}}",
-                "measurement": "kubeDeploymentsStatusReplicasAvailable"
+                "measurement": "kubeDeploymentsStatusReplicasAvailable",
+                "gridPos": {
+                    "h": 3,
+                    "w": 3
+                }
             },
             {
                 "type": "singleStat",
                 "title": "Unavailable deployments",
                 "datasource": "{{cluster}}",
-                "measurement": "kubeDeploymentsStatusReplicasUnavailable"
+                "measurement": "kubeDeploymentsStatusReplicasUnavailable",
+                "gridPos": {
+                    "h": 3,
+                    "w": 3
+                }
             },
             {
                 "type": "statusPanel",
@@ -131,7 +155,7 @@
                 "measurement": "failedRequests",
                 "gridPos": {
                     "h": 5,
-                    "w": 2                
+                    "w": 2
                 }
             },
             {
