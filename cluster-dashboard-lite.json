@@ -179,6 +179,19 @@
             {
                 "type": "responseHistogramGraph",
                 "datasource": "{{cluster}}"
+            },
+            {
+                "type": "discrete",
+                "datasource": "{{cluster}}",
+                "timeFrom": "24h",
+                "title": "Cluster uptime",
+                "gridPos": {
+                    "h": 2,
+                    "w": 24
+                },
+                "measurement": [
+                    "clusterUptime"
+                ]
             }
         ],
         "schemaVersion": 6,
